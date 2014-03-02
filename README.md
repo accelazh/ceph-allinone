@@ -30,7 +30,7 @@ At last, config and start services. No sudo is needed to run this command. You w
 ./config-all.sh
 ```
 
-If `config-all.sh` says 'success' in the end and how-to-use is printed out, it means installation successfully completed and you get the ceph storage cluster functional and working. If you `ps -ef | grep ceph`, you should see ceph-mon and ceph-osd processes running.
+If `config-all.sh` says success in the end and printed out how-to-use, it means installation successfully completed and you get the ceph storage cluster functional and working. If you `ps -ef | grep ceph`, you should see ceph-mon and ceph-osd processes running.
 
 Note that no service are installed into /etc/init.d or system service. You will have to use start-*/stop-* scripts to manage them.
 
@@ -98,11 +98,13 @@ At anytime, even when installation totally corrupted and failed, you can re-inst
 ./config-all.sh
 ```
 
-Like `purge-all.sh`, `config-all.sh' won't touch git download source code, make & make install generated library files and executable files. It is the configuration and data files of ceph services are re-installed. Usually it is them that should be re-installed.
+Like `purge-all.sh`, `config-all.sh` won't touch git download source code, make & make install generated library files and executable files. It is the configuration and data files of ceph services are re-installed. Usually it is them that should be re-installed.
 
 If you have modified ceph code, of course before `config.sh` you need to make and make install.
 
 Limitations
 ---------------------------------------
 
-Thess scripts have only been tested on Ubuntu Server 12.04. All scripts are assumed Linux platform independent except `inst-ceph-dep.ubuntu.sh`. This script apt-get install all the dependencies to build ceph. You may need to write another version for your platform.
+Thess scripts have only been tested on Ubuntu Server 12.04. 
+
+All scripts are assumed Linux platform independent except `inst-ceph-dep.ubuntu.sh`. This script apt-get install all the dependencies to build ceph. You may need to write another version for your platform.
