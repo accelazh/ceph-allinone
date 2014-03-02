@@ -10,7 +10,14 @@ Installation process follows [Ceph Manual Deploy](http://ceph.com/docs/master/in
 Usage
 ---------------------------------------
 
-First, git download ceph code, install dependency, build it and make install. The git folder is ./workspace/ceph. Git branch is 'firefly'. You can change it in `config.sh` (it is the config file.)
+Prepare Ubuntu Server 12.04 system. It is recommended to use a clean system and not to login as root account. ssh to the host and clone [ceph-allinone](https://github.com/AIcarus/ceph-allinone).
+
+```bash
+git clone https://github.com/AIcarus/ceph-allinone.git
+cd ceph-allinone
+```
+
+First, use below command. It will git download ceph code, install dependency, build it and make install. The ceph git folder is `./workspace/ceph`. Git branch is 'firefly'. You can change the branch in `config.sh` (it is the configuration file). 
 
 NO SUDO is needed for any of these scripts. When they actually need permission for a specific command, you will be prompted. 
 
