@@ -1,4 +1,4 @@
-ceph-rados-allinone
+ceph-allinone
 ===================
 
 Shell scripts to build ceph from source and install monitor & OSD services on single node (i.e. ceph storage cluster). Made easy to do quick and fresh-clean re-install. 
