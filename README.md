@@ -24,13 +24,15 @@ Second, modify the config file for these scripts (although mostly you don't need
 vim ./config.sh
 ```
 
-At last, config and start services. No sudo is needed to run this command. You will get prompt if need permission. 
+At last, config and start services. No sudo is needed to run this command. You will get prompt if need permission. At any time you can run this command again, even after error occurred, to re-install again.
 
 ```bash
 ./config-all.sh
 ```
 
 If `config-all.sh` says 'success' in the end and how-to-use is printed out, it means installation successfully completed and you get the ceph storage cluster functional and working. If you `ps -ef | grep ceph`, you should see ceph-mon and ceph-osd processes running.
+
+Note that no service are installed into /etc/init.d or system service. You will have to use start-*/stop-* scripts to manage them.
 
 Optional Usage
 ---------------------------------------
@@ -47,7 +49,10 @@ ceph> health detail
 ...
 ```
 
-Check log file to find errors
+Check log file `/var/log/ceph` to troubleshoot.
+```bash
+grep -ir error /var/log/ceph
+```
 
 Manage services by start-*/stop-* scripts.
 
@@ -87,7 +92,7 @@ At anytime, even when installation totally corrupted and failed, you can use thi
 
 Git downloaded source code, make & make install generated library files and executable files will not be removed. Because they don't need to and you can manage them using `make`. It is the configuration and data files of ceph services that are cleaned. After this command you will get a fresh clean environment, ready to re-install.
 
-At anytime, you can re-install ceph services using below command. No need to stop service or run `purge-all.sh`, because they are already included.
+At anytime, even when installation totally corrupted and failed, you can re-install ceph services using below command. No need to stop service or run `purge-all.sh`, because they are already included.
 
 ```bash
 ./config-all.sh
