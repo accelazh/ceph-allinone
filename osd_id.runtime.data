@@ -1,0 +1,6 @@
+############################
+# This file is used to keep a record of 
+# the id of newly installed OSDs.
+# It will be earsed and written when scripts
+# run.
+############################
