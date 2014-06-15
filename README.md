@@ -7,6 +7,17 @@ Although these scripts help you quickly build a single node ceph storage cluster
 
 Installation process follows [Ceph Manual Deploy](http://ceph.com/docs/master/install/manual-deployment/). `ceph-deploy` tool is not used. Because it is inconvenient to install from your own modified copy of source code using ceph-deploy. 
 
+Feature
+---------------------------------------
+
+* Take cares of key file and data file permission.
+
+* Run ceph in separated user.
+
+* Post-install testing to validate it.
+
+* Able to config cluster name.
+
 Usage
 ---------------------------------------
 
