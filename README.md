@@ -21,10 +21,10 @@ Feature
 Usage
 ---------------------------------------
 
-Prepare Ubuntu Server 12.04 system. It is recommended to use a clean system and not to login as root account. ssh to the host and clone [ceph-allinone](https://github.com/AIcarus/ceph-allinone).
+Prepare Ubuntu Server 12.04 system. It is recommended to use a clean system and not to login as root account. ssh to the host and clone [ceph-allinone](https://github.com/accelazh/ceph-allinone).
 
 ```bash
-git clone https://github.com/AIcarus/ceph-allinone.git
+git clone https://github.com/accelazh/ceph-allinone.git
 cd ceph-allinone
 ```
 
